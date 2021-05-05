@@ -18,10 +18,6 @@ class ListBooks extends Component {
     this.setState({ query: query.trim() })
   }
 
-  // clearQuery = () => {
-  //   this.setState({ query: '' })
-  // }
-
   render() {
     const { books } = this.props
     const { query } = this.state
@@ -47,24 +43,18 @@ class ListBooks extends Component {
             onChange={(event) => this.updateQuery(event.target.value)}
           />
         </div>
-
-        {/* {showingBooks.length !== books.length && (
-          <div className='showing-bookss'>
-            <span>Now showing {showingBooks.length} of {books.length} total</span>
-            <button onClick={this.clearQuery}>Show all</button>
-          </div>
-        )} */}
-
                     <div class="d-inline text-right" >
                         <div class="col">
-                            <button type="button" id="view-1" class="btn btn-default">
-                                <i class="fa fa-th-list"></i>
+                            <button type="button" className="btn-view-1">
+                            
                             </button>
-                            <button type="button" id="view-2" class="btn btn-default">
-                                <i class="fa fa-th-large"></i>
+                            <button type="button" class="btn-view-2">
+                              
                           </button>
                         </div>                            
-                    </div>   
+                    </div> 
+
+
 
 
         <ol className='book-list'>

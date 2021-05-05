@@ -44,6 +44,14 @@ body,
   outline: none;
 }
 
+.btn-view-1 {
+  border: 3;
+}
+
+.btn-view-2 {
+  border: 3;
+}
+
 .showing-books {
   text-align: center;
   margin: 20px 0;
