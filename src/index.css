@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body,
+.root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+body,
+.app {
+  background: #beb7b7;
+}
+
+.list-books {
+  padding-top: 60px;
+}
+.list-books-top {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+}
+
+.search-books {
+  width: 30%;
+  padding: 10px 15px 15px 60px;
+  background-image: url("./icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 1.2em;
+  font-size: 1.2em;
+  border: 0;
+  outline: none;
+}
+
+.showing-books {
+  text-align: center;
+  margin: 20px 0;
+}
+.showing-books button {
+  color: blue;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.books-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.book-list-item {
+  padding: 20px;
+  background: rgb(180, 160, 160);
+  display: flex;
+}
+
+@media (min-width: 600px) {
+  .book-list-item {
+    margin: 20px;
+    border: 3px solid #d5d8df;
+    border-radius: 4px;
+  }
+}
+
+.book-avatar {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.book-details {
+  padding-left: 30px;
+  border-left: 2px solid #eee;
+
+  flex: 1;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
