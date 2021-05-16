@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import escapeRegExp from 'escape-string-regexp'
 import PropTypes from 'prop-types'
+// import Container from 'react-bootstrap/Container'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import sortBy from 'sort-by'
 
 class ListBooks extends Component {
@@ -33,6 +34,8 @@ class ListBooks extends Component {
     showingBooks.sort(sortBy('title'))
 
     return (
+
+    
       <div className='list-books'>
         <div className='list-books-top'>
           <input
@@ -42,28 +45,25 @@ class ListBooks extends Component {
             value={query}
             onChange={(event) => this.updateQuery(event.target.value)}
           />
-        </div>
-                    <div class="d-inline text-right" >
+        </div> 
+
+        <div class="d-inline text-right" >
                         <div class="col">
-                            <button type="button" className="btn-view-1">
+                            <button type="button" 
+                            className="btn-view-1"
+                            />
                             
-                            </button>
-                            <button type="button" class="btn-view-2">
+                            <button type="button"
+                             className="btn-view-2"/>
                               
-                          </button>
                         </div>                            
                     </div> 
 
-
-
-
-        <ol className='book-list'>
+          <ol className='book-list'>
           {showingBooks.map((book) => (
             <li key={book.id} className='book-list-item'>
              <div style={{ width: 128, height: 190, backgroundImage: `url(${book.imageLinks && book.imageLinks.thumbnail && (book.imageLinks.thumbnail)})` }}></div>
 
-            
-              
               <div className='book-details'>
                 <h4>{book.title}</h4>
                 <label>Description:</label>
@@ -74,6 +74,12 @@ class ListBooks extends Component {
             </li>
           ))}
         </ol>
+      </div>  
+    )
+
+    return(
+      <div> 
+
       </div>
     )
   }
